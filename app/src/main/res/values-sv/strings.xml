@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">GentaCalc</string>
+    <string name="top_bar_title">Gentamicin kalkylator</string>
+    <string name="back_button">← Tillbaka</string>
+
+    <string name="menu_0_prove">S-gentamicin 0-prov</string>
+    <string name="menu_8t_prove">S-gentamicin 8t-prov</string>
+    <string name="menu_prosedyre">Procedur</string>
+    <string name="menu_referanser">Referenser</string>
+    <string name="menu_forutsetninger">Förutsättningar</string>
+    <string name="menu_om_appen">Om appen</string>
+
+    <string name="section_contraindications">Kontraindikationer</string>
+    <string name="section_relative_contraindications">Relativa kontraindikationer</string>
+    <string name="section_patient_info">Patientinformation</string>
+    <string name="section_calculated">Beräknat</string>
+    <string name="section_dosing">Dosering av Gentamicin</string>
+    <string name="section_level_order">Beställ s-gentamicin / Bedöm fortsatt bruk</string>
+
+    <string name="label_gender">Kön</string>
+    <string name="gender_male">Man</string>
+    <string name="gender_female">Kvinna</string>
+
+    <string name="label_age">Ålder (år)</string>
+    <string name="label_weight">Vikt (kg)</string>
+    <string name="label_height">Längd (cm)</string>
+    <string name="label_creatinine">Kreatinin (µmol/L)</string>
+    <string name="label_dosing_mgkg">Dosering (mg/kg)</string>
+    <string name="label_first_dose">1. dos ges %1$s kl. %2$s:00</string>
+
+    <string name="label_bmi">BMI</string>
+    <string name="label_gfr">GFR</string>
+    <string name="label_weight_used">Vikt använd</string>
+    <string name="label_warning">Varning</string>
+    <string name="label_dose_1">Dos 1</string>
+    <string name="label_dose_2">Dos 2</string>
+    <string name="label_dose_3">Dos 3</string>
+
+    <string name="contraindications_text">• Kronisk njursvikt, GFR &lt; 40 ml/min\n• Fulminant multiorgansvikt\n• Myastenia gravis\n• Patient eller förstagradssläkting med gentamicininducerad hörselnedsättning (sällsynt)</string>
+    <string name="relative_contraindications_text">En dos kan ges:\n\n• Aminoglykosider senaste månaden\n• Cisplatin senaste 2 månaderna\n• Högdos metotrexat / ifosfamid\n• Efter njurtransplantation\n• Massiv ascites\n• Myelomatos\n• Graviditet</string>
+</resources>

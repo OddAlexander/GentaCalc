@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">GentaCalc</string>
+    <string name="top_bar_title">Gentamicin calculator</string>
+    <string name="back_button">← Back</string>
+
+    <string name="menu_0_prove">S-gentamicin trough level</string>
+    <string name="menu_8t_prove">S-gentamicin 8h level</string>
+    <string name="menu_prosedyre">Procedure</string>
+    <string name="menu_referanser">References</string>
+    <string name="menu_forutsetninger">Assumptions</string>
+    <string name="menu_om_appen">About</string>
+
+    <string name="section_contraindications">Contraindications</string>
+    <string name="section_relative_contraindications">Relative contraindications</string>
+    <string name="section_patient_info">Patient information</string>
+    <string name="section_calculated">Calculated</string>
+    <string name="section_dosing">Gentamicin dosing</string>
+    <string name="section_level_order">Order s-gentamicin / Consider further use</string>
+
+    <string name="label_gender">Sex</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+
+    <string name="label_age">Age (years)</string>
+    <string name="label_weight">Weight (kg)</string>
+    <string name="label_height">Height (cm)</string>
+    <string name="label_creatinine">Creatinine (µmol/L)</string>
+    <string name="label_dosing_mgkg">Dosing (mg/kg)</string>
+    <string name="label_first_dose">1st dose given %1$s at %2$s:00</string>
+
+    <string name="label_bmi">BMI</string>
+    <string name="label_gfr">GFR</string>
+    <string name="label_weight_used">Weight used</string>
+    <string name="label_warning">Warning</string>
+    <string name="label_dose_1">Dose 1</string>
+    <string name="label_dose_2">Dose 2</string>
+    <string name="label_dose_3">Dose 3</string>
+
+    <string name="contraindications_text">• Chronic renal failure, GFR &lt; 40 ml/min\n• Fulminant multi-organ failure\n• Myasthenia gravis\n• Patient or first-degree relative with gentamicin-induced hearing loss (rare)</string>
+    <string name="relative_contraindications_text">One dose may be given:\n\n• Aminoglycosides within the past month\n• Cisplatin within the past 2 months\n• High-dose methotrexate / ifosfamide\n• Post-renal transplant\n• Massive ascites\n• Multiple myeloma\n• Pregnancy</string>
+</resources>

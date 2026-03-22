@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">GentaCalc</string>
+    <string name="top_bar_title">Gentamicin beregner</string>
+    <string name="back_button">← Tilbage</string>
+
+    <string name="menu_0_prove">S-gentamicin 0-prøve</string>
+    <string name="menu_8t_prove">S-gentamicin 8t-prøve</string>
+    <string name="menu_prosedyre">Procedure</string>
+    <string name="menu_referanser">Referencer</string>
+    <string name="menu_forutsetninger">Forudsætninger</string>
+    <string name="menu_om_appen">Om appen</string>
+
+    <string name="section_contraindications">Kontraindikationer</string>
+    <string name="section_relative_contraindications">Relative kontraindikationer</string>
+    <string name="section_patient_info">Patientinformation</string>
+    <string name="section_calculated">Beregnet</string>
+    <string name="section_dosing">Dosering af Gentamicin</string>
+    <string name="section_level_order">Bestil s-gentamicin / Vurder videre brug</string>
+
+    <string name="label_gender">Køn</string>
+    <string name="gender_male">Mand</string>
+    <string name="gender_female">Kvinde</string>
+
+    <string name="label_age">Alder (år)</string>
+    <string name="label_weight">Vægt (kg)</string>
+    <string name="label_height">Højde (cm)</string>
+    <string name="label_creatinine">Kreatinin (µmol/L)</string>
+    <string name="label_dosing_mgkg">Dosering (mg/kg)</string>
+    <string name="label_first_dose">1. dosis gives %1$s kl. %2$s:00</string>
+
+    <string name="label_bmi">BMI</string>
+    <string name="label_gfr">GFR</string>
+    <string name="label_weight_used">Vægt brugt</string>
+    <string name="label_warning">Advarsel</string>
+    <string name="label_dose_1">Dosis 1</string>
+    <string name="label_dose_2">Dosis 2</string>
+    <string name="label_dose_3">Dosis 3</string>
+
+    <string name="contraindications_text">• Kronisk nyresvigt, GFR &lt; 40 ml/min\n• Fulminant multiorgansvigt\n• Myastenia gravis\n• Patient eller førstegradsslægtning med gentamicin-induceret høretab (sjældent)</string>
+    <string name="relative_contraindications_text">Én dosis kan gives:\n\n• Aminoglykosider seneste måned\n• Cisplatin seneste 2 måneder\n• Højdosis methotrexat / ifosfamid\n• Efter nyretransplantation\n• Massiv ascites\n• Myelomatose\n• Graviditet</string>
+</resources>
