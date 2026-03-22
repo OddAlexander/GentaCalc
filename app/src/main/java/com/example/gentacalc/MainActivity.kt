@@ -13,9 +13,11 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -184,14 +186,14 @@ fun calculate(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GentaCalcApp() {
-    var gender by remember { mutableStateOf(Gender.Mann) }
-    var age by remember { mutableStateOf("") }
-    var weight by remember { mutableStateOf("") }
-    var height by remember { mutableStateOf("") }
-    var dosing by remember { mutableStateOf("5") }
-    var creatinine by remember { mutableStateOf("") }
-    var firstDoseHour by remember { mutableStateOf(8) }
-    var selectedDateMs by remember {
+    var gender by rememberSaveable { mutableStateOf(Gender.Mann) }
+    var age by rememberSaveable { mutableStateOf("") }
+    var weight by rememberSaveable { mutableStateOf("") }
+    var height by rememberSaveable { mutableStateOf("") }
+    var dosing by rememberSaveable { mutableStateOf("5") }
+    var creatinine by rememberSaveable { mutableStateOf("") }
+    var firstDoseHour by rememberSaveable { mutableStateOf(8) }
+    var selectedDateMs by rememberSaveable {
         mutableStateOf(
             Calendar.getInstance().apply {
                 set(Calendar.HOUR_OF_DAY, 0); set(Calendar.MINUTE, 0)
@@ -201,7 +203,7 @@ fun GentaCalcApp() {
     }
     var showDatePicker by remember { mutableStateOf(false) }
     var showTimePicker by remember { mutableStateOf(false) }
-    var currentSheet by remember { mutableStateOf<String?>(null) }
+    var currentSheet by rememberSaveable { mutableStateOf<String?>(null) }
     var showMenu by remember { mutableStateOf(false) }
 
     val context = LocalContext.current
@@ -265,19 +267,20 @@ fun GentaCalcApp() {
         "om-appen"       to stringResource(R.string.menu_om_appen)
     )
 
+    val sheet = currentSheet
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
                     Text(
-                        currentSheet?.let { key -> menuItems.first { it.first == key }.second }
+                        sheet?.let { key -> menuItems.first { it.first == key }.second }
                             ?: stringResource(R.string.top_bar_title),
                         fontWeight = FontWeight.Bold,
-                        fontSize = if (currentSheet != null) 16.sp else 20.sp
+                        fontSize = if (sheet != null) 16.sp else 20.sp
                     )
                 },
                 navigationIcon = {
-                    if (currentSheet != null) {
+                    if (sheet != null) {
                         TextButton(onClick = { currentSheet = null }) {
                             Text(stringResource(R.string.back_button), color = MaterialTheme.colorScheme.onPrimary)
                         }
@@ -305,7 +308,7 @@ fun GentaCalcApp() {
             )
         }
     ) { padding ->
-        if (currentSheet != null) {
+        if (sheet != null) {
             Column(
                 modifier = Modifier
                     .padding(padding)
@@ -313,7 +316,7 @@ fun GentaCalcApp() {
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                InfoSheet(currentSheet!!)
+                InfoSheet(sheet)
             }
         } else {
             Column(
@@ -342,8 +345,13 @@ fun GentaCalcApp() {
 
                 // ── Patient inputs ────────────────────────────────────────────
                 SectionCard(stringResource(R.string.section_patient_info), titleLarge = true) {
-                    Text(stringResource(R.string.label_gender), style = MaterialTheme.typography.labelLarge)
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(
+                        stringResource(R.string.label_gender),
+                        style = MaterialTheme.typography.labelLarge,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.align(Alignment.CenterHorizontally)) {
                         Gender.entries.forEach { g ->
                             FilterChip(
                                 selected = gender == g,
@@ -452,7 +460,7 @@ private fun InfoSheet(sheet: String) {
 private fun OmAppenSheet() {
     InfoSectionCard("Om appen") {
         InfoParagraph(
-            "GentaCalc er utviklet av Odd Alexander Tellefsen.\n\n" +
+            "GentaCalc app er utviklet av Odd Alexander Tellefsen.\n\n" +
             "Dette er en uoffisiell app basert på Gentamicin-prosedyren ved Sørlandet Sykehus, " +
             "opprinnelig utarbeidet av Runar Hamre.\n\n" +
             "Appen er laget i Android Studio Panda 2 (2025.3.2) med Claude Code."
@@ -814,7 +822,9 @@ private fun SectionCard(title: String, titleLarge: Boolean = false, content: @Co
                 title,
                 style = if (titleLarge) MaterialTheme.typography.titleLarge
                         else MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                textAlign = if (titleLarge) TextAlign.Center else TextAlign.Start,
+                modifier = if (titleLarge) Modifier.fillMaxWidth() else Modifier
             )
             content()
         }
