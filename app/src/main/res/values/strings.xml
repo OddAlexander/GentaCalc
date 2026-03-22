@@ -1,3 +1,47 @@
 <resources>
     <string name="app_name">GentaCalc</string>
+    <string name="top_bar_title">Gentamicin kalkulator</string>
+    <string name="back_button">← Tilbake</string>
+
+    <!-- Menu items -->
+    <string name="menu_0_prove">Tolking s-gentamicin, 0-prøve</string>
+    <string name="menu_8t_prove">Tolkning s-gentamicin, 8t-prøve</string>
+    <string name="menu_prosedyre">Prosedyre</string>
+    <string name="menu_referanser">Referanser</string>
+    <string name="menu_forutsetninger">Forutsetninger</string>
+    <string name="menu_om_appen">Om appen</string>
+
+    <!-- Section titles -->
+    <string name="section_contraindications">Kontraindikasjoner</string>
+    <string name="section_relative_contraindications">Relative kontraindikasjoner</string>
+    <string name="section_patient_info">Pasientinformasjon</string>
+    <string name="section_calculated">Beregnet</string>
+    <string name="section_dosing">Dosering av Gentamicin</string>
+    <string name="section_level_order">Bestill s-gentamicin / Vurder videre bruk</string>
+
+    <!-- Gender -->
+    <string name="label_gender">Kjønn</string>
+    <string name="gender_male">Mann</string>
+    <string name="gender_female">Kvinne</string>
+
+    <!-- Input fields -->
+    <string name="label_age">Alder (år)</string>
+    <string name="label_weight">Vekt (kg)</string>
+    <string name="label_height">Høyde (cm)</string>
+    <string name="label_creatinine">Kreatinin (µmol/L)</string>
+    <string name="label_dosing_mgkg">Dosering (mg/kg)</string>
+    <string name="label_first_dose">1. dose gis %1$s kl. %2$s:00</string>
+
+    <!-- Calculation results -->
+    <string name="label_bmi">BMI</string>
+    <string name="label_gfr">GFR</string>
+    <string name="label_weight_used">Vekt brukt</string>
+    <string name="label_warning">Advarsel</string>
+    <string name="label_dose_1">Dose 1</string>
+    <string name="label_dose_2">Dose 2</string>
+    <string name="label_dose_3">Dose 3</string>
+
+    <!-- Contraindications content -->
+    <string name="contraindications_text">• Kronisk nyresvikt, GFR &lt; 40 ml/min\n• Fulminant flerorgansvikt\n• Myastenia gravis\n• Pasient eller førstegradsslektning med nedsatt hørsel forårsaket av gentamicin (sjeldent)</string>
+    <string name="relative_contraindications_text">Én dose kan gis:\n\n• Aminoglykosider siste måned\n• Cisplatin siste 2 måneder\n• Høydose metotreksat / ifosfamid\n• Etter nyretransplantasjon\n• Massiv ascites\n• Myelomatose\n• Graviditet</string>
 </resources>
